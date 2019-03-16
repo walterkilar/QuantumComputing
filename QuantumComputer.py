@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# Author: corbett@caltech.edu
 
 import numpy as np
 import unittest
