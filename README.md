@@ -7,19 +7,19 @@ The library was developed by Microsoft Research for experimentation purposes.
 
 ## Description
 ### Key Exchange kex.c
-@param clear_words Clears memory
-@param LatticeCrypto_initialize Initialize structure pLatticeCrypto with user-provided functions: RandomBytesFunction, ExtendableOutputFunction and StreamOutputFunction.
-@param LatticeCrypto_allocate Dynamically allocates memory for LatticeCrypto structure.
-@param LatticeCrypto_get_error_message Outputs error or success message for given CRYPTO_STATUS  
-@param encode_A Alice's message encryption 
-@param decode_A Alice's message decryption 
-@param encode_B Bob's message encryption
-@param decode_B Bob's message decryption 
-@param Abs Computes absolute value
-@param LDDecode Performs low-density decoding
-@param KeyGeneration_A Alice's 4096-byte SecretKeyA key generation and 1824-byte PublicKeyA computation
-@param SecretAgreement_B Bob's 2048-byte key generation from Alice's 1824 byte PublicKeyA and 256-bit shared secret computation
-@param SecretAgreement_A Computes shared secret SharedSecretA using Bob's 2048-byte public key PublicKeyB and Alice's 256-bit private key SecretKeyA.
+* @param clear_words Clears memory
+* @param LatticeCrypto_initialize Initialize structure pLatticeCrypto with user-provided functions: RandomBytesFunction, ExtendableOutputFunction and StreamOutputFunction.
+* @param LatticeCrypto_allocate Dynamically allocates memory for LatticeCrypto structure.
+* @param LatticeCrypto_get_error_message Outputs error or success message for given CRYPTO_STATUS  
+* @param encode_A Alice's message encryption 
+* @param decode_A Alice's message decryption 
+* @param encode_B Bob's message encryption
+* @param decode_B Bob's message decryption 
+* @param Abs Computes absolute value
+* @param LDDecode Performs low-density decoding
+* @param KeyGeneration_A Alice's 4096-byte SecretKeyA key generation and 1824-byte PublicKeyA computation
+* @param SecretAgreement_B Bob's 2048-byte key generation from Alice's 1824 byte PublicKeyA and 256-bit shared secret computation
+* @param SecretAgreement_A Computes shared secret SharedSecretA using Bob's 2048-byte public key PublicKeyB and Alice's 256-bit private key SecretKeyA.
 ## Installation
 make ARCH=[x64/x86/ARM] CC=[gcc/clang] ASM=[TRUE/FALSE] AVX2=[TRUE/FALSE] GENERIC=[TRUE/FALSE]
 
