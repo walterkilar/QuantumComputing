@@ -1,4 +1,29 @@
-# Quintuple
+# Lattice Crypto (C code from Microsoft)
+LatticeCrypto is a post-quantum secure cryptography library based on the Ring-Learning with Errors (R-LWE) 
+problem. The version 1.0 of the library implements the instantiation of Peikert's key exchange [1] due to 
+Alkim, Ducas, Pöppelmann and Schwabe [2], and incorporates novel techniques to provide higher performance.
+
+The library was developed by Microsoft Research for experimentation purposes. 
+
+## Description
+### Key Exchange kex.c
+@param clear_words Clears memory
+@param LatticeCrypto_initialize Initialize structure pLatticeCrypto with user-provided functions: RandomBytesFunction, ExtendableOutputFunction and StreamOutputFunction.
+@param LatticeCrypto_allocate Dynamically allocates memory for LatticeCrypto structure.
+@param LatticeCrypto_get_error_message Outputs error or success message for given CRYPTO_STATUS  
+@param encode_A Alice's message encryption 
+@param decode_A Alice's message decryption 
+@param encode_B Bob's message encryption
+@param decode_B Bob's message decryption 
+@param Abs Computes absolute value
+@param LDDecode Performs low-density decoding
+@param KeyGeneration_A Alice's 4096-byte SecretKeyA key generation and 1824-byte PublicKeyA computation
+@param SecretAgreement_B Bob's 2048-byte key generation from Alice's 1824 byte PublicKeyA and 256-bit shared secret computation
+@param SecretAgreement_A Computes shared secret SharedSecretA using Bob's 2048-byte public key PublicKeyB and Alice's 256-bit private key SecretKeyA.
+## Installation
+make ARCH=[x64/x86/ARM] CC=[gcc/clang] ASM=[TRUE/FALSE] AVX2=[TRUE/FALSE] GENERIC=[TRUE/FALSE]
+
+# Quintuple (Python code from IBM)
 This is an implementation of IBM's Quantum Experience in simulation; a 5-qubit quantum computer with a limited set of gates "the world’s first quantum computing platform delivered via the IBM Cloud". Their implementation is available at [http://www.research.ibm.com/quantum/](http://www.research.ibm.com/quantum/).
 
 This code allows you to execute code printed from the Quantum Composer in the following syntax: 
@@ -22,7 +47,7 @@ Check out any of the test functions for example usage, and the ```Programs``` cl
 If you make use of this work, please cite my paper available on the physics arXiv as [Quintuple: a Python 5-qubit quantum computer simulator to facilitate cloud quantum computing](http://arxiv.org/abs/1606.09225). For the making of story of this code, along with some pointers to resources on quantum computation, [check out my blog post](https://codexgalactic.com/2016/05/21/5-qubit-quantum-computing-simulator/).
 
 
-# Example usage 
+## Example usage 
 ```
 from QuantumComputer import *
 ghz_example_code="""h q[0];
